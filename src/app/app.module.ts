@@ -61,14 +61,8 @@ import { HomeComponent } from './components/home/home.component';
     MatIconModule,
     MatListModule,
     MatCardModule,
-    ToastrModule.forRoot({
-      timeOut: 4000,
-      closeButton: true,
-      progressBar: true
-    }),
-    NgxMaskModule.forRoot()
+    
   ],
-  providers: [AuthInterceptorProvider],
-  bootstrap: [AppComponent]
+ 
 })
 export class AppModule { }
