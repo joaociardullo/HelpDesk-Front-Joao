@@ -30,6 +30,8 @@ import { MatCardModule } from '@angular/material/card';
 // Componentes do projeto
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
+import { ToastrModule } from 'ngx-toastr';
+import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -61,8 +63,14 @@ import { HomeComponent } from './components/home/home.component';
     MatIconModule,
     MatListModule,
     MatCardModule,
-    
+    ToastrModule.forRoot({
+      timeOut: 4000,
+      closeButton: true,
+      progressBar: true
+    })   
   ],
+  providers: [AuthInterceptorProvider],
+  bootstrap: [AppComponent]
  
 })
 export class AppModule { }
