@@ -20,8 +20,8 @@ export class NavComponent implements OnInit {
   }
 
   logout() {
-    this.router.navigate(['login'])
+    this.router.navigate(['login']) //redireciona para a pagina de login
     this.authService.logout();
-    this.toast.info('Logout realizado com sucesso', 'Logout')
+    this.toast.info('Logout realizado com sucesso', 'Logout', { timeOut: 7000})
   }
 }
